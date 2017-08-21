@@ -9,17 +9,14 @@ $config = [
     'language' => 'ru',
     'sourceLanguage' => 'ru',
     'modules' => [
-        'tournament' => [
-            'class' => 'app\modules\tournament\TournamentModule',
-        ],
-        'login' => [
-            'class' => 'app\modules\login\LoginModule',
+        'traidavto' => [
+            'class' => 'app\modules\traidavto\TraidavtoModule',
         ],
     ],
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => 'sSDsddsdSD4_sdCVmKlLfser2#',
+            'cookieValidationKey' => 'slkdSDFsdf;msdFDsf)@#54234234@_42',
             'baseUrl' => '',
         ],
         'cache' => [
@@ -50,8 +47,7 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                '/' => 'tournament/default/index',
-                'logout' => 'login/default/logout',
+                '/' => 'traidavto/default/index',
             ],
         ],
     ],
@@ -63,14 +59,14 @@ if (YII_ENV_DEV) {
     $config['bootstrap'][] = 'debug';
     $config['modules']['debug'] = [
         'class' => 'yii\debug\Module',
-        'allowedIPs' => ['*'],
+        'allowedIPs' => ['127.0.0.1'],
     ];
 
     $config['bootstrap'][] = 'gii';
     $config['modules']['gii'] = [
         'class' => 'yii\gii\Module',
         // uncomment the following to add your IP if you are not connecting from localhost.
-        'allowedIPs' => ['*'],
+        'allowedIPs' => ['127.0.0.1'],
     ];
 }
 

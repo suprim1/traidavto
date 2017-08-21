@@ -1,13 +1,13 @@
 <?php
 
-namespace app\modules\tournament\models;
+namespace app\modules\traidavto\models;
 
 use Yii;
 use yii\db\Query;
 
-class Tournament extends \yii\db\ActiveRecord {
+class Traidavto extends \yii\db\ActiveRecord {
 
-    private $name;
+
 
     public function rules() {
         return [
