@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
-app\modules\tournament\TournamentAsset::register($this);
+app\modules\traidavto\TraidavtoAsset::register($this);
 $this->title = 'Турниры';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
