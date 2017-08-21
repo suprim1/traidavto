@@ -5,12 +5,12 @@ namespace app\modules\traidavto;
 class TraidavtoAsset extends \yii\web\AssetBundle
 {
 
-    public $sourcePath = '@app/modules/tournament/assets';
+    public $sourcePath = '@app/modules/traidavto/assets';
     public $js = [
-        'js/tournament.js',
+        'js/traidavto.js',
     ];
     public $css = [
-        'css/tournament.css',
+        'css/traidavto.css',
     ];
     public $depends = [
         'app\assets\AppAsset',
