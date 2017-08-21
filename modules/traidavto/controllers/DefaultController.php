@@ -1,6 +1,6 @@
 <?php
 
-namespace app\modules\tournament\controllers;
+namespace app\modules\traidavto\controllers;
 
 use yii\web\Controller;
 use Yii;
