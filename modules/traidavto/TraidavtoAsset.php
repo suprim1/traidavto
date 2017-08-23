@@ -1,6 +1,7 @@
 <?php
 
 namespace app\modules\traidavto;
+use Yii;
 
 class TraidavtoAsset extends \yii\web\AssetBundle
 {
@@ -15,5 +16,11 @@ class TraidavtoAsset extends \yii\web\AssetBundle
     public $depends = [
         'app\assets\AppAsset',
     ];
+
+    public static function assetUrl()
+    {
+        $asset = TraidavtoAsset::register(Yii::$app->view);
+        return $asset->baseUrl;
+    }
 
 }
