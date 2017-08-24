@@ -7,8 +7,6 @@ use yii\db\Query;
 
 class Traidavto extends \yii\db\ActiveRecord {
 
-
-
     public function rules() {
         return [
             [['name'], 'required'],
@@ -29,11 +27,11 @@ class Traidavto extends \yii\db\ActiveRecord {
     public static function tournamentInfo() {
         $query = new Query();
         return $query->select(['t.id as id', 't.name as name', 'c.id as idcom'])
-                //->from(['c' => 'commands'])
-                ->from(['t' => 'tournament'])
-                ->leftJoin('commands c', 't.id = c.id_tournament' )
-                ->groupBy('t.name')
-                ->all();
+                        //->from(['c' => 'commands'])
+                        ->from(['t' => 'tournament'])
+                        ->leftJoin('commands c', 't.id = c.id_tournament')
+                        ->groupBy('t.name')
+                        ->all();
     }
 
 }

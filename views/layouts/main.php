@@ -26,7 +26,6 @@ AppAsset::register($this);
                 <?= HeaderfooterWidget::widget() ?>
             </header>
             <div class="container">
-                <?= Yii::$app->params['telephone'] ?>
                 <?= $content ?>
             </div>
         </div>

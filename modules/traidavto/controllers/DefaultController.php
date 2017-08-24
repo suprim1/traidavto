@@ -10,9 +10,13 @@ class DefaultController extends Controller {
 
     public function actionIndex() {
 
-       $test = 'test';
+       $block1 = $this->renderPartial('templates/block1');
+       $blockForm = $this->renderPartial('templates/blockForm');
+       $block2 = $this->renderPartial('templates/block2');
         return $this->render('index', [
-                    'test' => $test,
+                    'block1' => $block1,
+                    'blockForm' => $blockForm,
+                    'block2' => $block2,
         ]);
     }
 

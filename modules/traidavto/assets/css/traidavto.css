@@ -19,3 +19,51 @@
     width: 118px;
     height: 66px;
 }
+.b1-text{
+    font-size: 20px;
+    font-weight: 400;
+}
+.b1-telephone{
+    margin: 42px 0 42px 0;
+    font-size: 60px;
+    font-weight: 700;
+}
+.b2-text-zagolovok{
+    font-size: 32px;
+    font-weight: 700;
+}
+.b2-text-v-ramke{
+    font-weight: 400;
+    font-size: 16px;
+    box-sizing: border-box;
+    border-width: 4px;
+    border-style: solid;
+    border-color: rgba(121, 121, 121, 1);
+    padding: 25px;
+    height: 150px;
+    margin: 15px 0 15px 0;
+}
+.b2-vertical-align{
+
+}
+.b2-text-center{
+    font-size: 24px;
+    font-weight: 400;
+}
+.b2-block{
+    font-size: 20px;
+    font-weight: 400;
+}
+.b2-bledniy{
+    font-size: 16px;
+    color: #999999;
+}
+.b2-text-color{
+    
+}
+.b2-margin-15px{
+    padding: 15px;
+    height: 160px;
+    margin: 15px 0;
+    background-color: rgba(242, 242, 242, 1);
+}
