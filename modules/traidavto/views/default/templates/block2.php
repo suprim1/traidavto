@@ -1,4 +1,4 @@
-<div class="container row">
+<div class="container">
     <div class="col-lg-12 b2-text-zagolovok text-center">
         <div class="col-lg-4">
             ПРОСТО

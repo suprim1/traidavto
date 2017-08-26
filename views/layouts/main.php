@@ -25,11 +25,8 @@ AppAsset::register($this);
             <header>
                 <?= HeaderfooterWidget::widget() ?>
             </header>
-            <div class="container">
-                <?= $content ?>
-            </div>
+            <?= $content ?>
         </div>
-
         <footer class="footer">
             <?= HeaderfooterWidget::widget() ?>
         </footer>
