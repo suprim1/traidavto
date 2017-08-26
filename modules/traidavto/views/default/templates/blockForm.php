@@ -15,11 +15,20 @@ $form = ActiveForm::begin([
 ?>
 <div class="container">
     <div class="col-lg-12 bf-background">
-
-        <?= $form->field($model, 'typeAvto')->radioList(['ЛЕГКОВОЙ','ГРУЗОВОЙ']) ?>
+        <?= $form->field($model, 'typeAvto')->radioList($typeAvto) ?>
         <?= $form->field($model, 'modelAvto')->textInput(['placeholder' => 'марка, модель']) ?>
         <?= $form->field($model, 'year')->dropDownList($year) ?>
         <?= $form->field($model, 'typeKyzov')->dropDownList($typeKyzov) ?>
+        <?= $form->field($model, 'modelDvigatel')->textInput(['placeholder' => 'модель, объем, модификация']) ?>
+        <?= $form->field($model, 'typeDvigatel')->radioList($typeDvigatel) ?>
+        <?= $form->field($model, 'kpp')->radioList($kpp) ?>
+        <?= $form->field($model, 'sostoyanie')->textarea(['rows' => '6', 'placeholder' => 'пожалуйста опишите основные повреждения и неисправности']) ?>
+        <?= $form->field($model, 'summ')->textInput() ?>
+        <?= $form->field($model, 'city')->textInput() ?>
+        <?= $form->field($model, 'name')->textInput() ?>
+        <?= $form->field($model, 'telephone')->textInput() ?>
+        <?= $form->field($model, 'email')->textInput() ?>
+        <?= $form->field($model, 'evakyator')->radioList($evakyator) ?>
     </div>
 
 </div>

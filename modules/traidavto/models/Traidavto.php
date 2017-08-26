@@ -11,7 +11,7 @@ class Traidavto extends \yii\db\ActiveRecord {
      * Тип автомобиля
      * @var string
      */
-    public $typeAvto;
+    public $typeAvto = 0;
 
     /**
      * Модель автомобиля
@@ -21,22 +21,82 @@ class Traidavto extends \yii\db\ActiveRecord {
 
     /**
      * Год выпуска автомобиля
-     * @var string
+     * @var integer
      */
     public $year;
 
     /**
      * Тип кузова
-     * @var string
+     * @var integer
      */
     public $typeKyzov;
+
+    /**
+     * Модель двигателя
+     * @var string
+     */
+    public $modelDvigatel;
+
+    /**
+     * Тип двигателя
+     * @var integer
+     */
+    public $typeDvigatel = 0;
+
+    /**
+     * Коробка передач
+     * @var integer
+     */
+    public $kpp = 0;
+
+    /**
+     * Состояние автомобиля
+     * @var string
+     */
+    public $sostoyanie;
+
+    /**
+     * Хочу получить за автомобиль
+     * @var integer
+     */
+    public $summ;
+
+    /**
+     * Населенный пункт
+     * @var string
+     */
+    public $city;
+
+    /**
+     * Имя
+     * @var string
+     */
+    public $name;
+
+    /**
+     * Номер телефона
+     * @var string
+     */
+    public $telephone;
+
+    /**
+     * Электронная почта
+     * @var string
+     */
+    public $email;
+
+    /**
+     * Нужна эвакуация
+     * @var string
+     */
+    public $evakyator;
 
     public function rules() {
         return [
             [['modelAvto', 'year', 'typeDvigatel', 'kpp', 'city', 'name', 'telephone'], 'required'],
             [['sostoyanie'], 'string', 'length' => [2, 5000]],
-            [['typeAvto', 'modelAvto', 'typeKyzov', 'modelDvigatel', 'typeDvigatel', 'kpp', 'city', 'name', 'telephone', 'evakyator', 'year'], 'string', 'max' => 100],
-            [['summ'], 'integer',],
+            [['typeAvto', 'modelAvto', 'modelDvigatel', 'typeDvigatel', 'kpp', 'city', 'name', 'telephone', 'evakyator'], 'string', 'max' => 100],
+            [['summ', 'year', 'typeKyzov'], 'integer',],
             [['email'], 'email'],
         ];
     }
@@ -60,6 +120,13 @@ class Traidavto extends \yii\db\ActiveRecord {
         ];
     }
 
+    public static function typeAvto() {
+        return [
+            0 => 'ЛЕГКОВОЙ',
+            1 => 'ГРУЗОВОЙ',
+        ];
+    }
+
     public static function typeKyzov() {
         return [
             0 => 'СЕДАН',
@@ -77,10 +144,31 @@ class Traidavto extends \yii\db\ActiveRecord {
     }
 
     public static function year() {
-        for ($i = 1980; $i <= date('Y'); $i++) {
+        for ($i = date('Y'); $i >= 1980; $i--) {
             $year [$i] = $i;
         }
         return $year;
+    }
+
+    public static function typeDvigatel() {
+        return [
+            0 => 'БЕНЗИНОВЫЙ',
+            1 => 'ДИЗЕЛЬНЫЙ',
+        ];
+    }
+
+    public static function kpp() {
+        return [
+            0 => 'МЕХАНИКА',
+            1 => 'АВТОМАТ',
+        ];
+    }
+
+    public static function evakyator() {
+        return [
+            0 => 'ДА',
+            1 => 'НЕТ',
+        ];
     }
 
 }
