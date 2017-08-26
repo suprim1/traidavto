@@ -11,12 +11,12 @@ class DefaultController extends Controller {
 
         $model = new Traidavto;
 
-        $typeKyzov = Traidavto::typeKyzov();
+        $typeKyzov = Traidavto::getQuery('typeKyzov');;
         $year = Traidavto::year();
-        $typeAvto = Traidavto::typeAvto();
-        $typeDvigatel = Traidavto::typeDvigatel();
-        $kpp = Traidavto::kpp();
-        $evakyator = Traidavto::evakyator();
+        $typeAvto = Traidavto::getQuery('typeAvto');
+        $typeDvigatel = Traidavto::getQuery('typeDvigatel');
+        $kpp = Traidavto::getQuery('kpp');
+        $evakyator = Traidavto::getQuery('evakyator');
 
         $block1 = $this->renderPartial('templates/block1');
         $blockForm = $this->renderPartial('templates/blockForm', compact('model', 'typeKyzov', 'year', 'typeAvto', 'typeDvigatel', 'kpp', 'evakyator'));

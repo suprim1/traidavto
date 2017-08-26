@@ -4,6 +4,7 @@ namespace app\modules\traidavto\models;
 
 use Yii;
 use yii\db\Query;
+use yii\helpers\ArrayHelper;
 
 class Traidavto extends \yii\db\ActiveRecord {
 
@@ -104,7 +105,7 @@ class Traidavto extends \yii\db\ActiveRecord {
             [['typeAvto', 'modelAvto', 'modelDvigatel', 'typeDvigatel', 'kpp', 'city', 'name', 'telephone', 'evakyator'], 'string', 'max' => 100],
             [['summ', 'year', 'typeKyzov'], 'integer',],
             [['email'], 'email'],
-            [['imageFiles'], 'file', 'skipOnEmpty' => false, 'extensions' => 'png, jpg', 'maxFiles' => 7, 'MaxSize' => 8000000],
+            [['imageFiles'], 'file', 'skipOnEmpty' => false, 'extensions' => 'png, jpg', 'maxFiles' => 7, 'maxSize' => 8000000],
         ];
     }
 
@@ -128,27 +129,13 @@ class Traidavto extends \yii\db\ActiveRecord {
         ];
     }
 
-    public static function typeAvto() {
-        return [
-            0 => 'ЛЕГКОВОЙ',
-            1 => 'ГРУЗОВОЙ',
-        ];
-    }
+    public static function getQuery(string $table) {
 
-    public static function typeKyzov() {
-        return [
-            0 => 'СЕДАН',
-            1 => 'ХЭТЧБЕК',
-            2 => 'УНИВЕРСАЛ',
-            3 => 'ВНЕДОРОЖНИК',
-            4 => 'КАБРИОЛЕТ',
-            5 => 'КУПЕ',
-            6 => 'ЛИМУЗИН',
-            7 => 'МИНИВЭН',
-            8 => 'ПИКАП',
-            9 => 'ФУРГОН',
-            10 => 'МИКРОАВТОБУС',
-        ];
+        $query = (new Query())
+                ->select('id, type')
+                ->from($table)
+                ->all();
+        return ArrayHelper::map($query, 'id', 'type');
     }
 
     public static function year() {
@@ -156,27 +143,6 @@ class Traidavto extends \yii\db\ActiveRecord {
             $year [$i] = $i;
         }
         return $year;
-    }
-
-    public static function typeDvigatel() {
-        return [
-            0 => 'БЕНЗИНОВЫЙ',
-            1 => 'ДИЗЕЛЬНЫЙ',
-        ];
-    }
-
-    public static function kpp() {
-        return [
-            0 => 'МЕХАНИКА',
-            1 => 'АВТОМАТ',
-        ];
-    }
-
-    public static function evakyator() {
-        return [
-            0 => 'ДА',
-            1 => 'НЕТ',
-        ];
     }
 
     public function upload() {
