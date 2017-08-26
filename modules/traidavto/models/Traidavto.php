@@ -89,7 +89,13 @@ class Traidavto extends \yii\db\ActiveRecord {
      * Нужна эвакуация
      * @var string
      */
-    public $evakyator;
+    public $evakyator = 0;
+
+    /**
+     * Изображение
+     * @var file
+     */
+    public $imageFiles;
 
     public function rules() {
         return [
@@ -98,6 +104,7 @@ class Traidavto extends \yii\db\ActiveRecord {
             [['typeAvto', 'modelAvto', 'modelDvigatel', 'typeDvigatel', 'kpp', 'city', 'name', 'telephone', 'evakyator'], 'string', 'max' => 100],
             [['summ', 'year', 'typeKyzov'], 'integer',],
             [['email'], 'email'],
+            [['imageFiles'], 'file', 'skipOnEmpty' => false, 'extensions' => 'png, jpg', 'maxFiles' => 7, 'MaxSize' => 8000000],
         ];
     }
 
@@ -117,6 +124,7 @@ class Traidavto extends \yii\db\ActiveRecord {
             'telephone' => 'Номер телефона:',
             'email' => 'Электронная почта:',
             'evakyator' => 'Нужна эвакуация?',
+            'imageFiles' => 'Загрузите фотографию авто',
         ];
     }
 
@@ -169,6 +177,17 @@ class Traidavto extends \yii\db\ActiveRecord {
             0 => 'ДА',
             1 => 'НЕТ',
         ];
+    }
+
+    public function upload() {
+        if ($this->validate()) {
+            foreach ($this->imageFiles as $file) {
+                $file->saveAs('uploads/' . $file->baseName . '.' . $file->extension);
+            }
+            return true;
+        } else {
+            return false;
+        }
     }
 
 }

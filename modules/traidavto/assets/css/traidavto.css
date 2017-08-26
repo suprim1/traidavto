@@ -79,3 +79,10 @@
 .bf-label-typeAvto{
     margin-right: 50px;
 }
+.bf-button{
+    background-color: rgba(22, 155, 213, 1);
+    width: 230px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 28px;
+}
