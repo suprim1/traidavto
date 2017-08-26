@@ -77,7 +77,7 @@ class Traidavto extends \yii\db\ActiveRecord {
     }
 
     public static function year() {
-        for ($i = 1980; $i <= data('Y'); $i++) {
+        for ($i = 1980; $i <= date('Y'); $i++) {
             $year [$i] = $i;
         }
         return $year;
