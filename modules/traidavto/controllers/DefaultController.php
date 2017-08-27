@@ -38,8 +38,8 @@ class DefaultController extends Controller {
                         'model' => $model,
             ]);
         }
-        if ($model->load(Yii::$app->request->post()) && $model->validate() && Yii::$app->user->identity->admin) {
-            $model->save();
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            var_dump($model->save());
             return $this->goHome();
         }
     }

@@ -12,7 +12,7 @@ class Traidavto extends \yii\db\ActiveRecord {
      * Тип автомобиля
      * @var string
      */
-    public $typeAvto = 0;
+    public $typeAvto = 1;
 
     /**
      * Модель автомобиля
@@ -42,13 +42,13 @@ class Traidavto extends \yii\db\ActiveRecord {
      * Тип двигателя
      * @var integer
      */
-    public $typeDvigatel = 0;
+    public $typeDvigatel = 1;
 
     /**
      * Коробка передач
      * @var integer
      */
-    public $kpp = 0;
+    public $kpp = 1;
 
     /**
      * Состояние автомобиля
@@ -90,7 +90,7 @@ class Traidavto extends \yii\db\ActiveRecord {
      * Нужна эвакуация
      * @var string
      */
-    public $evakyator = 0;
+    public $evakyator = 1;
 
     /**
      * Изображение
