@@ -5,12 +5,16 @@ namespace app\modules\traidavto\controllers;
 use Yii;
 use yii\web\Controller;
 use app\modules\traidavto\models\Traidavto;
+use yii\web\UploadedFile;
+use yii\helpers\FileHelper;
+use app\modules\traidavto\models\ImageAvto;
 
 class DefaultController extends Controller {
 
     public function actionIndex() {
 
         $model = new Traidavto;
+        $modelImage = new ImageAvto;
 
         $typeKyzov = Traidavto::getQuery('typeKyzov');
         $year = Traidavto::year();
@@ -20,7 +24,7 @@ class DefaultController extends Controller {
         $evakyator = Traidavto::getQuery('evakyator');
 
         $block1 = $this->renderPartial('templates/block1');
-        $blockForm = $this->renderPartial('templates/blockForm', compact('model', 'typeKyzov', 'year', 'typeAvto', 'typeDvigatel', 'kpp', 'evakyator'));
+        $blockForm = $this->renderPartial('templates/blockForm', compact('model', 'modelAvto', 'typeKyzov', 'year', 'typeAvto', 'typeDvigatel', 'kpp', 'evakyator'));
         $block2 = $this->renderPartial('templates/block2');
 
         return $this->render('index', [
@@ -38,9 +42,16 @@ class DefaultController extends Controller {
                         'model' => $model,
             ]);
         }
-        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
-            var_dump($model->save());
-            return $this->goHome();
+        echo '<pre>';
+        if ($model->load(Yii::$app->request->post())) {
+            FileHelper::createDirectory('uploads');
+            $modelAvto->imageFiles = UploadedFile::getInstances($modelAvto, 'imageFiles');
+            if ($modelAvto->upload()) {
+                $model->save();
+                //return $this->goHome();
+            }
+        } else {
+            var_dump($model->getErrors());
         }
     }
 

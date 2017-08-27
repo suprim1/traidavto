@@ -30,7 +30,7 @@ $form = ActiveForm::begin([
         <?= $form->field($model, 'telephone')->textInput() ?>
         <?= $form->field($model, 'email')->textInput() ?>
         <?= $form->field($model, 'evakyator')->radioList($evakyator) ?>
-        <?= $form->field($model, 'imageFiles[]')->fileInput(['multiple' => true, 'accept' => 'image/*']) ?>
+        <?= $form->field($modelAvto, 'imageFiles[]')->fileInput(['multiple' => true, 'accept' => 'image/*']) ?>
         <div class="col-lg-12 text-center">
             <?= Html::submitButton('ОТПРАВИТЬ', ['class' => 'btn btn-primary bf-button']) ?>
         </div>
