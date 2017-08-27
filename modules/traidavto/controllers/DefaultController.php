@@ -2,6 +2,7 @@
 
 namespace app\modules\traidavto\controllers;
 
+use Yii;
 use yii\web\Controller;
 use app\modules\traidavto\models\Traidavto;
 
@@ -11,7 +12,7 @@ class DefaultController extends Controller {
 
         $model = new Traidavto;
 
-        $typeKyzov = Traidavto::getQuery('typeKyzov');;
+        $typeKyzov = Traidavto::getQuery('typeKyzov');
         $year = Traidavto::year();
         $typeAvto = Traidavto::getQuery('typeAvto');
         $typeDvigatel = Traidavto::getQuery('typeDvigatel');
@@ -27,6 +28,20 @@ class DefaultController extends Controller {
                     'blockForm' => $blockForm,
                     'block2' => $block2,
         ]);
+    }
+
+    public function actionNew() {
+
+        $model = new Traidavto();
+        if (Yii::$app->request->isAjax) {
+            return $this->renderAjax('templates/blockForm', [
+                        'model' => $model,
+            ]);
+        }
+        if ($model->load(Yii::$app->request->post()) && $model->validate() && Yii::$app->user->identity->admin) {
+            $model->save();
+            return $this->goHome();
+        }
     }
 
 }

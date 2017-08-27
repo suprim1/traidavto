@@ -5,10 +5,11 @@ use yii\widgets\ActiveForm;
 
 $form = ActiveForm::begin([
             'id' => 'traidavto',
+            'action' => 'traidavto/default/new',
             'options' => ['class' => 'form-horizontal'],
             'fieldConfig' => [
                 'template' => "<div class=\"col-lg-5 text-right\">{label}</div><div class=\"col-lg-5\">{input}</div>\n"
-                . "<div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12 error_height\">{error}</div>",
+                . "<div class=\"col-lg-5-offset col-lg-7 col-md-12 col-sm-12 col-xs-12 error_height\">{error}</div>",
                 'labelOptions' => ['class' => 'bf-label-text'],
             ],
         ])
