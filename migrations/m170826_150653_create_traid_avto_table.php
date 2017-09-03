@@ -12,20 +12,20 @@ class m170826_150653_create_traid_avto_table extends Migration {
      */
     public function safeUp() {
 
-        $this->createTable('typeAvto', [
+        $this->createTable('type_Avto', [
             'id' => $this->primaryKey(),
             'type' => $this->string(),
         ]);
 
-        $this->insert('typeAvto', [
+        $this->insert('type_Avto', [
             'type' => 'ЛЕГКОВОЙ',
         ]);
-        $this->insert('typeAvto', [
+        $this->insert('type_Avto', [
             'type' => 'ГРУЗОВОЙ',
         ]);
 
 
-        $this->createTable('typeKyzov', [
+        $this->createTable('type_Kyzov', [
             'id' => $this->primaryKey(),
             'type' => $this->string(),
         ]);
@@ -45,45 +45,45 @@ class m170826_150653_create_traid_avto_table extends Migration {
         ];
 
         foreach ($typeKyzov as $type) {
-            $this->insert('typeKyzov', [
+            $this->insert('type_Kyzov', [
                 'type' => $type,
             ]);
         }
 
-        $this->createTable('typeDvigatel', [
+        $this->createTable('type_Dvigatel', [
             'id' => $this->primaryKey(),
             'type' => $this->string(),
         ]);
 
-        $this->insert('typeDvigatel', [
+        $this->insert('type_Dvigatel', [
             'type' => 'БЕНЗИНОВЫЙ',
         ]);
-        $this->insert('typeDvigatel', [
+        $this->insert('type_Dvigatel', [
             'type' => 'ДИЗЕЛЬНЫЙ',
         ]);
 
 
-        $this->createTable('kpp', [
+        $this->createTable('Tkpp', [
             'id' => $this->primaryKey(),
             'type' => $this->string(),
         ]);
 
-        $this->insert('kpp', [
+        $this->insert('Tkpp', [
             'type' => 'МЕХАНИКА',
         ]);
-        $this->insert('kpp', [
+        $this->insert('Tkpp', [
             'type' => 'АВТОМАТ',
         ]);
 
-        $this->createTable('evakyator', [
+        $this->createTable('Tevakyator', [
             'id' => $this->primaryKey(),
             'type' => $this->string(),
         ]);
 
-        $this->insert('evakyator', [
+        $this->insert('Tevakyator', [
             'type' => 'ДА',
         ]);
-        $this->insert('evakyator', [
+        $this->insert('Tevakyator', [
             'type' => 'НЕТ',
         ]);
 
@@ -91,7 +91,7 @@ class m170826_150653_create_traid_avto_table extends Migration {
 
 
         /* Теблица  */
-        $this->createTable('traidAvto', [
+        $this->createTable('Avto', [
             'id' => $this->primaryKey(),
             'typeAvto' => $this->integer(),
             'modelAvto' => $this->string()->notNull(),
@@ -104,25 +104,26 @@ class m170826_150653_create_traid_avto_table extends Migration {
             'summ' => $this->integer(),
             'city' => $this->string()->notNull(),
             'name' => $this->string()->notNull(),
-            'telephone' => $this->string()->notNull(),
+            'telephone' => $this->integer()->notNull(),
             'email' => $this->string(),
             'evakyator' => $this->integer(),
+            'imageFiles' => $this->string(),
         ]);
 
         $this->addForeignKey(
-                'fk-traidAvto-typeAvto', 'traidAvto', 'typeAvto', 'typeAvto', 'id', 'CASCADE'
+                'fk-Avto-type_Avto', 'Avto', 'typeAvto', 'type_Avto', 'id', 'CASCADE'
         );
         $this->addForeignKey(
-                'fk-traidAvto-typeKyzov', 'traidAvto', 'typeKyzov', 'typeKyzov', 'id', 'CASCADE'
+                'fk-Avto-type_Kyzov', 'Avto', 'typeKyzov', 'type_Kyzov', 'id', 'CASCADE'
         );
         $this->addForeignKey(
-                'fk-traidAvto-typeDvigatel', 'traidAvto', 'typeDvigatel', 'typeDvigatel', 'id', 'CASCADE'
+                'fk-Avto-type_Dvigatel', 'Avto', 'typeDvigatel', 'type_Dvigatel', 'id', 'CASCADE'
         );
         $this->addForeignKey(
-                'fk-traidAvto-kpp', 'traidAvto', 'kpp', 'kpp', 'id', 'CASCADE'
+                'fk-Avto-Tkpp', 'Avto', 'kpp', 'Tkpp', 'id', 'CASCADE'
         );
         $this->addForeignKey(
-                'fk-traidAvto-evakyator', 'traidAvto', 'evakyator', 'evakyator', 'id', 'CASCADE'
+                'fk-Avto-Tevakyator', 'Avto', 'evakyator', 'Tevakyator', 'id', 'CASCADE'
         );
     }
 

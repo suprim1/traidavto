@@ -31,7 +31,16 @@ $config = [
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
-            'useFileTransport' => true,
+            //'viewPath' => '@common/mail',
+            'transport' => [
+                'class' => 'Swift_SmtpTransport',
+                'host' => 'smtp.yandex.ru',
+                'username' => 'suprim1@yandex.ru',
+                'password' => 'Cthdfr_12',
+                'port' => '465',
+                'encryption' => 'ssl', // у яндекса SSL
+            ],
+            'useFileTransport' => false, // будем отправлять реальные сообщения, а не в файл
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,

@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 $form = ActiveForm::begin([
-            'id' => 'traidavto',
+            'id' => 'avto',
             'action' => 'traidavto/default/new',
             'options' => ['class' => 'form-horizontal'],
             'fieldConfig' => [
@@ -27,10 +27,10 @@ $form = ActiveForm::begin([
         <?= $form->field($model, 'summ')->textInput() ?>
         <?= $form->field($model, 'city')->textInput() ?>
         <?= $form->field($model, 'name')->textInput() ?>
-        <?= $form->field($model, 'telephone')->textInput() ?>
+        <?= $form->field($model, 'telephone')->textInput()->widget(\yii\widgets\MaskedInput::className(), ['mask' => '+7 (999) 999-99-99',]) ?>
         <?= $form->field($model, 'email')->textInput() ?>
         <?= $form->field($model, 'evakyator')->radioList($evakyator) ?>
-        <?= $form->field($modelAvto, 'imageFiles[]')->fileInput(['multiple' => true, 'accept' => 'image/*']) ?>
+        <?= $form->field($model, 'imageFiles[]')->fileInput(['multiple' => true, 'accept' => 'image/*']) ?>
         <div class="col-lg-12 text-center">
             <?= Html::submitButton('ОТПРАВИТЬ', ['class' => 'btn btn-primary bf-button']) ?>
         </div>
