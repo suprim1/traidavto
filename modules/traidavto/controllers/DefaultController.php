@@ -9,11 +9,9 @@ use yii\web\UploadedFile;
 use yii\helpers\FileHelper;
 use app\modules\traidavto\models\Mail;
 
-class DefaultController extends Controller
-{
+class DefaultController extends Controller {
 
-    public function actionIndex()
-    {
+    public function actionIndex() {
 
         $model = new Avto;
 
@@ -29,19 +27,18 @@ class DefaultController extends Controller
         $block2 = $this->renderPartial('templates/block2');
 
         return $this->render('index', [
-            'block1' => $block1,
-            'blockForm' => $blockForm,
-            'block2' => $block2,
+                    'block1' => $block1,
+                    'blockForm' => $blockForm,
+                    'block2' => $block2,
         ]);
     }
 
-    public function actionNew()
-    {
+    public function actionNew() {
 
         $model = new Avto();
         if (Yii::$app->request->isAjax) {
             return $this->renderAjax('templates/blockForm', [
-                'model' => $model,
+                        'model' => $model,
             ]);
         }
 
@@ -52,15 +49,18 @@ class DefaultController extends Controller
             if ($model->upload($directory)) {
                 $model->imageFiles = $directory;
                 $model->save(false);
-                $message = $this->renderPartial('mail', compact($model));
-                Mail::mails($message);
+                $query = Avto::setQuery($model->attributes['id']);
+                $images = FileHelper::findFiles($model->imageFiles);
+                $message = $this->renderPartial('mail', [
+                    'model' => $model,
+                    'query' => $query,
+                ]);
+                Mail::mails($message, $images);
                 return $this->goHome();
-
             }
         } else {
             $model->getErrors();
         }
-
     }
 
 }

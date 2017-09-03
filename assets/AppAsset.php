@@ -8,6 +8,7 @@
 namespace app\assets;
 
 use yii\web\AssetBundle;
+use Yii;
 
 /**
  * @author Qiang Xue <qiang.xue@gmail.com>
@@ -26,4 +27,10 @@ class AppAsset extends AssetBundle
         'yii\bootstrap\BootstrapAsset',
     ];
     public $jsOptions = [ 'position' => \yii\web\View::POS_HEAD ];
+
+    public static function assetUrl()
+    {
+        $asset = AppAsset::register(Yii::$app->view);
+        return $asset->baseUrl;
+    }
 }

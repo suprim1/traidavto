@@ -85,4 +85,31 @@ class Avto extends \yii\db\ActiveRecord
         }
     }
 
+    public static function setQuery(int $id){
+        return $query = (new Query())
+                ->select('ta.type as typeAvto,'
+                        . 'a.modelAvto,'
+                        . 'a.year,'
+                        . 'k.type as typeKyzov,'
+                        . 'a.modelDvigatel,'
+                        . 'd.type as typeDvigatel,'
+                        . 'tk.type as kpp,'
+                        . 'a.sostoyanie,'
+                        . 'a.summ,'
+                        . 'a.city,'
+                        . 'a.name,'
+                        . 'a.telephone,'
+                        . 'a.email,'
+                        . 'te.type as evakyator,'
+                        . 'a.imageFiles')
+                ->from('Avto a')
+                ->leftJoin('type_Kyzov k', 'a.typeKyzov = k.id')
+                ->leftJoin('type_Avto ta', 'a.typeAvto = ta.id')
+                ->leftJoin('type_Dvigatel d', 'a.typeDvigatel = d.id')
+                ->leftJoin('Tkpp tk', 'a.kpp = tk.id')
+                ->leftJoin('Tevakyator te', 'a.evakyator = te.id')
+                ->where(['a.id' => $id])
+                ->one();
+    }
+
 }
