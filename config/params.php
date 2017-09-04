@@ -2,5 +2,5 @@
 
 return [
     'adminEmail' => 'suprim1@yandex.ru',
-    'telephone' => '+7 (777) 777-77-77',
+    'telephone' => '+7 (908) 245-46-50',
 ];

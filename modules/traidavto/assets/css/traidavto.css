@@ -1,23 +1,27 @@
+body {
+    font-family: 'Myriad Pro';
+}
 .b-header{
-    height: 100px;
+    height: 60px;
     background-color: rgba(51, 51, 51, 1);
     color: #ffffff;
-    padding: 15px;
+    padding: 5px;
 }
 .header-text-buttom{
-    font-size: 32px;
+    font-size: 20px;
     font-weight: 700;
 }
 .header-text-top{
-    font-size: 24px;
+    font-size: 14px;
     font-weight: 400;
 }
 .header-telephone{
-    font-size: 24px; 
+    font-weight: 400;
+    font-size: 12px;
 }
 .header-logo{
-    width: 118px;
-    height: 66px;
+    width: 70px;
+    height: 45px;
 }
 .b1-text{
     font-size: 20px;
@@ -29,7 +33,16 @@
     font-weight: 700;
 }
 .b1-backgroun-fara{
-    background-image: url('//img/fara_avto.jpg');
+    background-image: url('../img/fara_avto.jpg');
+    background-size: cover;
+    padding: 20px 0;
+}
+.b1-img-arrow{
+    width: 36px;
+    height: 36px;
+}
+.b1-div-arrow{
+    padding-top: 20px;
 }
 .b2-text-zagolovok{
     font-size: 32px;
@@ -39,12 +52,20 @@
     font-weight: 400;
     font-size: 16px;
     box-sizing: border-box;
-    border-width: 4px;
-    border-style: solid;
-    border-color: rgba(121, 121, 121, 1);
-    padding: 25px;
+    padding: 40px 0;
     height: 150px;
     margin: 15px 0 15px 0;
+}
+.b2-bg-wite{
+    background-color: #ffffff;
+    opacity: 0.8;
+    padding: 0 20px;
+    height: 60px;
+}
+.b2-table{
+    width: 100%;
+    height: 100%; 
+    vertical-align: middle;
 }
 .b2-vertical-align{
 
@@ -56,10 +77,12 @@
 .b2-block{
     font-size: 20px;
     font-weight: 400;
+    height: 50%;
 }
 .b2-bledniy{
     font-size: 16px;
-    color: #999999;
+    color: #0070C9;
+    padding: 5px 10px;
 }
 .b2-text-color{
 
@@ -68,12 +91,36 @@
     padding: 15px;
     height: 160px;
     margin: 15px 0;
-    background-color: rgba(242, 242, 242, 1);
+    border: 2px solid #e38d13;
+}
+.b2-bg-1{
+    background-image: url('../img/internet_zakaz.jpg');
+}
+.b2-bg-2{
+    background-image: url('../img/money_rub.jpg');
+}
+.b2-bg-3{
+    background-image: url('../img/document.jpg');
+}
+.b2-bg-4{
+    background-image: url('../img/law.jpg');
+}
+.b2-bg-5{
+    background-image: url('../img/money.jpg');
+}
+.b2-bg-6{
+    background-image: url('../img/evakuator.jpg');
+}
+.b2-bg-cover{
+    background-size: cover;
+}
+.b2-td-bottom{
+    border-bottom: 1px solid  #F00;
+    padding: 5px 10px;
 }
 .bf-background{
     background-color: rgba(242, 242, 242, 1);
     padding: 20px 0;
-    margin: 20px 0;
 }
 .bf-label-text{
     font-weight: 400;

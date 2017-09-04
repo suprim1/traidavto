@@ -12,42 +12,62 @@
     </div>
     <div class="col-lg-12 text-center">
         <div class="col-lg-4 b2-vertical-align">
-            <div class="col-lg-12 b2-text-v-ramke">
-                Не надо никуда ездить просто
-                заполните форму и загрузите фотографии.
+            <div class="col-lg-12 b2-text-v-ramke b2-bg-1 b2-bg-cover">
+                <table class="b2-table">
+                    <td class="b2-bg-wite">
+                        Не надо никуда ездить просто
+                        заполните форму и загрузите фотографии.
+                    </td>
+                </table>
             </div>
         </div>
         <div class="col-lg-4 b2-vertical-align">
-            <div class="col-lg-12 b2-text-v-ramke">
-                Предложим высокую цену, владельцу автомобиля.
+            <div class="col-lg-12 b2-text-v-ramke b2-bg-2 b2-bg-cover">
+                <table class="b2-table">
+                    <td class="b2-bg-wite">
+                        Предложим высокую цену, владельцу автомобиля.
+                    </td>
+                </table>
             </div>
         </div>
         <div class="col-lg-4 b2-vertical-align">
-            <div class="col-lg-12 b2-text-v-ramke">
-                <biv class="b2-vertical-align">
-                    Весь процесс оформления
-                    документов занимает не более 1-го часа.
-                </biv>
+            <div class="col-lg-12 b2-text-v-ramke b2-bg-3 b2-bg-cover">
+                <table class="b2-table">
+                    <td class="b2-bg-wite">
+                        Весь процесс оформления
+                        документов занимает не более 1-го часа.
+                    </td>
+                </table>
             </div>
         </div>
     </div>
     <div class="col-lg-12 text-center">
         <div class="col-lg-4 b2-vertical-align">
-            <div class="col-lg-12 b2-text-v-ramke">
-                Мы гарантируем юридическую
-                чистоту сделки.
+            <div class="col-lg-12 b2-text-v-ramke b2-bg-4 b2-bg-cover">
+                <table class="b2-table">
+                    <td class="b2-bg-wite">
+                        Мы гарантируем юридическую
+                        чистоту сделки.
+                    </td>
+                </table>
             </div>
         </div>
         <div class="col-lg-4 b2-vertical-align">
-            <div class="col-lg-12 b2-text-v-ramke">
-                Выплачиваем сумму наличными на месте.
+            <div class="col-lg-12 b2-text-v-ramke b2-bg-5 b2-bg-cover">
+                <table class="b2-table">
+                    <td class="b2-bg-wite">
+                        Выплачиваем сумму наличными на месте.
+                    </td>
+                </table>
             </div>
         </div>
         <div class="col-lg-4 b2-vertical-align">
-            <div class="col-lg-12 b2-text-v-ramke">
-                <biv class="b2-vertical-align">
-                    Если автомобиль не на ходу, эту часть работы мы берем на себя.
-                </biv>
+            <div class="col-lg-12 b2-text-v-ramke b2-bg-6 b2-bg-cover">
+                <table class="b2-table">
+                    <td class="b2-bg-wite">
+                        Если автомобиль не на ходу, эту часть работы мы берем на себя.
+                    </td>
+                </table>
             </div>
         </div>
     </div>
@@ -56,46 +76,62 @@
     </div>
     <div class="col-lg-12">
         <div class="col-lg-6 text-center b2-text-color">
-            <div class="b2-margin-15px">
-                <div class="b2-block">
-                    Вы можете самостоятельно разобрать свой автомобиль на запчасти и начать продавать
-                </div>
-                <div class="b2-bledniy">
-                    Но тогда вы самостоятельно занимаетесь поиском покупателей, берете на себя оформление документов, правильное хранение б/у запчастей.
-                </div>
-            </div>
+            <table class="b2-margin-15px">
+                <tr class="b2-block">
+                    <td class="b2-td-bottom">
+                        Вы можете самостоятельно разобрать свой автомобиль на запчасти и начать продавать
+                    </td>
+                </tr>
+                <tr>
+                    <td class="b2-bledniy">
+                        Но тогда вы самостоятельно занимаетесь поиском покупателей, берете на себя оформление документов, правильное хранение б/у запчастей.
+                    </td>
+                </tr>
+            </table>
         </div>
         <div class="col-lg-6 text-center b2-text-color">
-            <div class="b2-margin-15px">
-                <div class="b2-block">
-                    Вы можете продать свой автомобиль после аварии перекупщикам и прогадать в стоимости
-                </div>
-                <div class="b2-bledniy">
-                    Мы предложим лучшую цену если вы владелец авто.
-                </div>
-            </div>
+            <table class="b2-margin-15px">
+                <tr class="b2-block">
+                    <td class="b2-td-bottom">
+                        Вы можете продать свой автомобиль после аварии перекупщикам и прогадать в стоимости
+                    </td>
+                </tr>
+                <tr>
+                    <td class="b2-bledniy">
+                        Мы предложим лучшую цену если вы владелец авто.
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
     <div class="col-lg-12">
         <div class="col-lg-6 text-center b2-text-color">
-            <div class="b2-margin-15px">
-                <div class="b2-block">
-                    Отремонтировать автомобиль после ДТП и попытаться продать его
-                </div>
-                <div class="b2-bledniy">
-                    Здесь вы автоматически теряете в стоимости автомобиля, так как покупатели опасаются битых машин.
-                </div>
-            </div>
+            <table class="b2-margin-15px">
+                <tr class="b2-block">
+                    <td class="b2-td-bottom">
+                        Отремонтировать автомобиль после ДТП и попытаться продать его
+                    </td>
+                </tr>
+                <tr>
+                    <td class="b2-bledniy">
+                        Здесь вы автоматически теряете в стоимости автомобиля, так как покупатели опасаются битых машин.
+                    </td>
+                </tr>
+            </table>
         </div>
         <div class="col-lg-6 text-center b2-text-color">
-            <div class="b2-margin-15px">
-                <div class="b2-block">
-                    Сдать разбитую машину на утилизацию
-                </div>
-                <div class="b2-bledniy">
-                    Вам придется собрать большое количество документов, Вы получите на руки сертификат а не деньги за машину сразу, эвакуатор станет Вашей заботой.
-                </div>
-            </div>
+            <table class="b2-margin-15px">
+                <tr class="b2-block">
+                    <td class="b2-td-bottom">
+                        Сдать разбитую машину на утилизацию
+                    </td>
+                </tr>
+                <tr>
+                    <td class="b2-bledniy">
+                        Вам придется собрать большое количество документов, Вы получите на руки сертификат а не деньги за машину сразу, эвакуатор станет Вашей заботой.
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
 </div>

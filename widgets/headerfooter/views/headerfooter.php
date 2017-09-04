@@ -12,7 +12,10 @@
                 <?= Yii::$app->params['telephone'] ?>
             </div>
             <div class="col-lg-12">
-                <?= Yii::$app->params['telephone'] ?>
+                +7 (919) 466-58-38
+            </div>
+            <div class="col-lg-12">
+                +7 (342) 286-86-17
             </div>
         </div>
     </div>
