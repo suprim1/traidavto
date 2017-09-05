@@ -1,18 +1,18 @@
 <div class="container">
-    <div class="col-lg-12 b2-text-zagolovok text-center">
-        <div class="col-lg-4">
+    <div class="col-lg-12 col-md-12 col-sm-12 hidden-xs b2-text-zagolovok text-center">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
             ПРОСТО
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
             ДОРОГО
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
             БЫСТРО
         </div>
     </div>
-    <div class="col-lg-12 text-center">
-        <div class="col-lg-4 b2-vertical-align">
-            <div class="col-lg-12 b2-text-v-ramke b2-bg-1 b2-bg-cover">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 b2-vertical-align">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 b2-text-v-ramke b2-bg-1 b2-bg-cover">
                 <table class="b2-table">
                     <td class="b2-bg-wite">
                         Не надо никуда ездить просто
@@ -21,8 +21,8 @@
                 </table>
             </div>
         </div>
-        <div class="col-lg-4 b2-vertical-align">
-            <div class="col-lg-12 b2-text-v-ramke b2-bg-2 b2-bg-cover">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 b2-vertical-align">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 b2-text-v-ramke b2-bg-2 b2-bg-cover">
                 <table class="b2-table">
                     <td class="b2-bg-wite">
                         Предложим высокую цену, владельцу автомобиля.
@@ -30,8 +30,8 @@
                 </table>
             </div>
         </div>
-        <div class="col-lg-4 b2-vertical-align">
-            <div class="col-lg-12 b2-text-v-ramke b2-bg-3 b2-bg-cover">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 b2-vertical-align">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 b2-text-v-ramke b2-bg-3 b2-bg-cover">
                 <table class="b2-table">
                     <td class="b2-bg-wite">
                         Весь процесс оформления
@@ -41,8 +41,8 @@
             </div>
         </div>
     </div>
-    <div class="col-lg-12 text-center">
-        <div class="col-lg-4 b2-vertical-align">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 b2-vertical-align">
             <div class="col-lg-12 b2-text-v-ramke b2-bg-4 b2-bg-cover">
                 <table class="b2-table">
                     <td class="b2-bg-wite">
@@ -52,8 +52,8 @@
                 </table>
             </div>
         </div>
-        <div class="col-lg-4 b2-vertical-align">
-            <div class="col-lg-12 b2-text-v-ramke b2-bg-5 b2-bg-cover">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 b2-vertical-align">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 b2-text-v-ramke b2-bg-5 b2-bg-cover">
                 <table class="b2-table">
                     <td class="b2-bg-wite">
                         Выплачиваем сумму наличными на месте.
@@ -61,8 +61,8 @@
                 </table>
             </div>
         </div>
-        <div class="col-lg-4 b2-vertical-align">
-            <div class="col-lg-12 b2-text-v-ramke b2-bg-6 b2-bg-cover">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 b2-vertical-align">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 b2-text-v-ramke b2-bg-6 b2-bg-cover">
                 <table class="b2-table">
                     <td class="b2-bg-wite">
                         Если автомобиль не на ходу, эту часть работы мы берем на себя.
@@ -71,11 +71,11 @@
             </div>
         </div>
     </div>
-    <div class="col-lg-12 text-center b2-text-center">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center b2-text-center">
         Если ваш авто попал в ДТП и Вы решили от него избавиться у Вас будет несколько вариантов решения:
     </div>
-    <div class="col-lg-12">
-        <div class="col-lg-6 text-center b2-text-color">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center b2-text-color">
             <table class="b2-margin-15px">
                 <tr class="b2-block">
                     <td class="b2-td-bottom">
@@ -89,7 +89,7 @@
                 </tr>
             </table>
         </div>
-        <div class="col-lg-6 text-center b2-text-color">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center b2-text-color">
             <table class="b2-margin-15px">
                 <tr class="b2-block">
                     <td class="b2-td-bottom">
@@ -104,8 +104,8 @@
             </table>
         </div>
     </div>
-    <div class="col-lg-12">
-        <div class="col-lg-6 text-center b2-text-color">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center b2-text-color">
             <table class="b2-margin-15px">
                 <tr class="b2-block">
                     <td class="b2-td-bottom">
@@ -119,7 +119,7 @@
                 </tr>
             </table>
         </div>
-        <div class="col-lg-6 text-center b2-text-color">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center b2-text-color">
             <table class="b2-margin-15px">
                 <tr class="b2-block">
                     <td class="b2-td-bottom">

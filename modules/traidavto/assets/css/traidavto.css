@@ -136,3 +136,25 @@ body {
     border-radius: 5px;
     font-size: 28px;
 }
+@media screen and (max-width: 767px) {
+    .header-text-buttom{
+        font-size: 14px;
+    }
+    .b-header {
+        height: 50px;
+    }
+    .b1-text{
+        font-size: 14px;
+    }
+    .b1-telephone{
+        margin: 20px 0 20px 0;
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .bf-text-768{
+        text-align: left;
+    }
+    .b2-text-center{
+        font-size: 16px;
+    }
+}
