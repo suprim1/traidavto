@@ -8,8 +8,8 @@ $form = ActiveForm::begin([
             'action' => 'traidavto/default/new',
             'options' => ['class' => 'form-horizontal'],
             'fieldConfig' => [
-                'template' => "<div class=\"col-lg-5 col-md-5 col-sm-5 col-xs-offset-1 col-xs-10 col-xs-offset-1 text-right bf-text-768\">{label}</div>"
-                . "<div class=\"col-lg-5 col-md-5 col-sm-5 col-xs-offset-1 col-xs-10 col-xs-offset-1\">{input}</div>\n"
+                'template' => "<div class=\"col-lg-5 col-md-5 col-sm-5 col-xs-12 bf-margin-xs text-right bf-text-768\">{label}</div>"
+                . "<div class=\"col-lg-5 col-md-5 col-sm-5 col-xs-12 bf-margin-xs\">{input}</div>\n"
                 . "<div class=\"col-lg-offset-5 col-lg-7 col-md-7 col-md-offset-5 col-sm-7 col-sm-offset-5 col-xs-12 error_height\">{error}</div>",
                 'labelOptions' => ['class' => 'bf-label-text'],
             ],

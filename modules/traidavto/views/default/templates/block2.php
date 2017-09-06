@@ -41,6 +41,17 @@
             </div>
         </div>
     </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 hidden-xs b2-text-zagolovok text-center">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            ЗАКОННО
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            ДЕНЬГИ
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            ЭВАКУАЦИЯ
+        </div>
+    </div>
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 b2-vertical-align">
             <div class="col-lg-12 b2-text-v-ramke b2-bg-4 b2-bg-cover">
