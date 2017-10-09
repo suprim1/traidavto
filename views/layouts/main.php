@@ -5,6 +5,7 @@
 use yii\helpers\Html;
 use app\assets\AppAsset;
 use app\widgets\headerfooter\HeaderfooterWidget;
+use app\widgets\yandex\YandexWidget;
 
 AppAsset::register($this);
 ?>
@@ -22,16 +23,16 @@ AppAsset::register($this);
         <?php $this->beginBody() ?>
 
         <div class="wrap">
-            <header>
-                <?= HeaderfooterWidget::widget() ?>
-            </header>
             <?= $content ?>
         </div>
         <footer class="footer">
-            <?= HeaderfooterWidget::widget() ?>
+            <div class="container">
+                <?= HeaderfooterWidget::widget() ?>
+            </div>
         </footer>
 
         <?php $this->endBody() ?>
+        <?= YandexWidget::widget() ?>
     </body>
 </html>
 <?php $this->endPage() ?>

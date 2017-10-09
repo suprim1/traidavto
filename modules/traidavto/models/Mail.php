@@ -22,15 +22,19 @@ class Mail {
     }
 
     public static function mails($message, $images) {
-        $mail = Yii::$app->mailer->compose()
-                ->setFrom('suprim1@yandex.ru')
-                ->setTo('suprim1@yandex.ru')
-                ->setSubject('Заявка на выкуп Автос сайта avtovikup59')
-                ->setHtmlBody($message);
-        foreach ($images as $image) {
-            $mail->attach($image);
+        try {
+            $mail = Yii::$app->mailer->compose()
+                    ->setFrom('suprim1@yandex.ru')
+                    ->setTo('suprim1@yandex.ru')
+                    ->setSubject('Заявка на выкуп Авто с сайта avtovikup59')
+                    ->setHtmlBody($message);
+            foreach ($images as $image) {
+                $mail->attach($image);
+            }
+            $mail->send();
+        } catch (\Exception $e) {
+            echo 'Ошибка передачи сообщения: ' . "\n";
         }
-        $mail->send();
     }
 
 }

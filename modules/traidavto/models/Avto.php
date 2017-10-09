@@ -16,7 +16,7 @@ class Avto extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['modelAvto', 'year', 'typeDvigatel', 'kpp', 'city', 'name', 'email'], 'required'],
+            [['telephone',], 'required'],
             [['sostoyanie'], 'string', 'length' => [2, 5000]],
             [['modelAvto', 'modelDvigatel', 'city', 'name', 'telephone'], 'string', 'max' => 100],
             [['summ', 'year', 'typeKyzov', 'typeDvigatel', 'kpp', 'evakyator', 'typeAvto'], 'integer',],
