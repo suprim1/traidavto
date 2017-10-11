@@ -15,15 +15,10 @@ class DefaultController extends Controller {
 
         $model = new Avto;
 
-        $typeKyzov = Avto::getQuery('type_Kyzov');
-        $year = Avto::year();
-        $typeAvto = Avto::getQuery('type_Avto');
-        $typeDvigatel = Avto::getQuery('type_Dvigatel');
-        $kpp = Avto::getQuery('Tkpp');
         $evakyator = Avto::getQuery('Tevakyator');
 
         $block1 = $this->renderPartial('templates/block1');
-        $blockForm = $this->renderPartial('templates/blockForm', compact('model', 'typeKyzov', 'year', 'typeAvto', 'typeDvigatel', 'kpp', 'evakyator'));
+        $blockForm = $this->renderPartial('templates/blockForm', compact('model', 'evakyator'));
         $block2 = $this->renderPartial('templates/block2');
 
         return $this->render('index', [
